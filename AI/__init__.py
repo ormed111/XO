@@ -1,3 +1,1 @@
-__author__ = 'user'
-
-print 'bla'
+__author__ = 'ormed'
