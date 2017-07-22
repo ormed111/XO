@@ -20,7 +20,7 @@ class Game(object):
     def run(self):
         while not self.board.check_win():
             row, col = map(int, raw_input('insert index: ').split(' '))
-            self.board[row][col] = self._current_value
+            self.board.set_cell_value(row, col, self._current_value)
             self._current_value = self._next_value
             print
             print self.board
