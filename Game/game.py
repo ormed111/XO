@@ -18,6 +18,13 @@ class Game(object):
     def _next_value(self):
         return self._value1 if self._current_value == self._value2 else self._value2
 
+    @staticmethod
+    def _get_index():
+        indexes = []
+        while len(indexes) != 2:
+            indexes = map(int, raw_input("Insert Index: ").strip().split(' '))
+        return indexes
+
     def _turn_logic(self):
         raise NotImplementedError()
 
@@ -33,7 +40,7 @@ class Game(object):
 
 class HumanVsHumanGame(Game):
     def _turn_logic(self):
-        row, col = map(int, raw_input('insert index: ').strip().split(' '))
+        row, col = self._get_index()
         self.board[row][col] = self._current_value
         self._current_value = self._next_value
         print
