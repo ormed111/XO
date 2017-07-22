@@ -1,4 +1,4 @@
-__author__ = 'Shelly'
+__author__ = 'ormed'
 
 DEFAULT_BOARD_SIZE = 3
 
